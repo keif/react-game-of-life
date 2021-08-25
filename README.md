@@ -1,5 +1,5 @@
 # react-game-of-life
-It's been a while since I've done this exercise. Let's do the Game of Life in React.
+It's been a while since I've done this exercise. Let's do the CellGrid of Life in React.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
