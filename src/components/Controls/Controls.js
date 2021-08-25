@@ -2,13 +2,14 @@ import React from 'react'
 import './Controls.css'
 import Button from "./Button/Button";
 import { useGameDispatch } from "../../contexts/game-state";
+import { CLEAR_GRID, RANDOMIZE_GRID, START_TICKER, STOP_TICKER } from "../../contexts/context-types.constants";
 
 const Controls = ({ className }) => {
     const dispatch = useGameDispatch()
-    const startTicker = () => dispatch({ type: 'START_TICKER' })
-    const stopTicker = () => dispatch({ type: 'STOP_TICKER' })
-    const randomizeGrid = () => dispatch({ type: 'RANDOMIZE_GRID' })
-    const clearGrid = () => dispatch({ type: 'ClEAR_GRID' })
+    const startTicker = () => dispatch({ type: START_TICKER })
+    const stopTicker = () => dispatch({ type: STOP_TICKER })
+    const randomizeGrid = () => dispatch({ type: RANDOMIZE_GRID })
+    const clearGrid = () => dispatch({ type: CLEAR_GRID })
 
     return (
         <div class={ "controls" }>

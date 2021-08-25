@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useReducer } from 'react'
 import createRandomGrid from "./createRandomGrid";
+import { CLEAR_GRID, RANDOMIZE_GRID, START_TICKER, STEP, STOP_TICKER, TOGGLE_CELL } from "./context-types.constants";
 
 const NUM = 50
 const PROB_ACTIVE = 0.3
@@ -22,7 +23,7 @@ export function GameStateProvider({ children }) {
         let cancel = false
         if (state.tickerStarted) {
             const ticker = () => {
-                dispatch({ type: 'STEP' })
+                dispatch({ type: STEP })
                 if (!cancel) window.requestAnimationFrame(ticker)
             }
             ticker()
@@ -59,33 +60,33 @@ export function useGameDispatch() {
 */
 const reducer = (state, action) => {
     switch (action.type) {
-        case 'ClEAR_GRID':
+        case CLEAR_GRID:
             return {
                 ...state,
                 grid: clearCells(state.grid),
                 tickerStarted: false
             }
-        case 'RANDOMIZE_GRID':
+        case RANDOMIZE_GRID:
             return {
                 ...state,
                 grid: createRandomGrid(state.n, state.probActive),
             }
-        case 'STEP':
+        case STEP:
             return {
                 ...state,
                 grid: updateGrid(state.grid)
             }
-        case 'START_TICKER':
+        case START_TICKER:
             return {
                 ...state,
                 tickerStarted: true
             }
-        case 'STOP_TICKER':
+        case STOP_TICKER:
             return {
                 ...state,
                 tickerStarted: false
             }
-        case 'TOGGLE_CELL':
+        case TOGGLE_CELL:
             return {
                 ...state,
                 grid: toggleCell(state.grid, action.row, action.col)
