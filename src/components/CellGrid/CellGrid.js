@@ -1,11 +1,11 @@
 import React from 'react'
-import './Game.css'
+import './CellGrid.css'
 
 const CELL_SIZE = 20
 const BOARD_WIDTH = 800
 const BOARD_HEIGHT = 600
 
-const Game = () => {
+const CellGrid = () => {
     const styles = {
         backgroundSize: `${CELL_SIZE}px ${CELL_SIZE}px`,
         height: `${BOARD_HEIGHT}px`,
@@ -13,8 +13,8 @@ const Game = () => {
     }
 
     return <>
-        <div className="Board" style={styles}></div>
+        <div className="CellGrid" style={styles}></div>
     </>;
 }
 
-export default Game
+export default CellGrid
