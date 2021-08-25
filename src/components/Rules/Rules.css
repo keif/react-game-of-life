@@ -1,0 +1,12 @@
+.rules {
+    padding-bottom: 1rem;
+}
+.rules h3 {
+    margin: 0.25rem;
+}
+.rules ol {
+    font-size: 1rem;
+}
+.rules li {
+    margin: 0.25rem;
+}

@@ -1,0 +1,10 @@
+.cell {
+    background-color: #ccc;
+    border: 1px solid #333;
+    height: 16px;
+    width: 16px;
+}
+
+.cell.active {
+    background-color: #ff0;
+}

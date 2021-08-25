@@ -1,0 +1,16 @@
+.controls {
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.controls button {
+
+}
+
+.controls button:first-child {
+    margin-left: 0;
+}
+
+.controls button:last-child {
+    margin-right: 0;
+}
