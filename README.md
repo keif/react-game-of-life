@@ -3,6 +3,16 @@ It's been a while since I've done this exercise. Let's do the CellGrid of Life i
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About the Project
+
+For me, I needed to write something, anything, quick and easy. Just to have a clear "finished product" or "phase one" I could crank out. I've got a couple larger projects, but the scope is so large that it'll take more than an evening to get them to a usable state. So I took a break to write a couple smaller github repositories to play with React.
+
+This isn't a unique implementation. I don't think I've done anything clever in here that you haven't seen elsewhere.
+
+For example: [useContext to handle state instead of utilizing Redux](https://medium.com/simply/state-management-with-react-hooks-and-context-api-at-10-lines-of-code-baf6be8302c) - a coworker introduced me to this when hooks came out, and it suited the project's needs, and it suits the need for these kind of simple implementations.
+
+I came across [window.requestAnimationFrame(ticker)](https://github.com/brookslybrand/react-game-of-life) when I was poking around other repositories - this was a huge inspiration for what I was looking to do (using the core React code, keeping it lean and simple).
+
 ## Why?
 
 This is one of those code examples that comes up often - "how would you build it?" And usually "we want to see how, and why, and then pick it apart, while you write it."
